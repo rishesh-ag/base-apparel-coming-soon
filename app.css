@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 16px;
+}
+
+.logo{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    /* margin: 1.5rem 2rem; */
+}
+
+.logo-img {
+    width: 100px;
+}
+
+.main {
+    padding-top: 90px;
+    width: 100vw;
+    height: 100vh;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));;
+}
+
+
+.main .right { 
+    background: url('images/hero-mobile.jpg');
+    width: 100%;
+    height: 300px;
+    /* background-repeat: none; */
+    background-size: cover;
+}
+
+.main .right img {
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.main .left {
+    padding: 4.5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1;
+    width: 100%;
+    /* background-color: black; */
+    /* height: 100%; */
+}
+
+.main .left h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+.main .left h1 span {
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+
+.main .left .description {
+    padding-top: 2rem;
+    max-width: 350px;
+    line-height: 1.4;
+    color: hsl(0, 36%, 70%);
+}
+
+.main form{
+    margin-top: 2.5rem;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    max-width: 350px;
+    display: flex;
+    position: relative;
+}
+
+.main form .email {
+    width: 100%;
+    border-radius: 5rem;
+    border: hsla(0, 36%, 70%,0.5) 0.15rem solid;
+    height: 100%;
+    padding-left: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.1rem;
+    background: transparent;
+    color: hsl(0, 6%, 24%);
+    outline: none;
+}
+
+.main form .email::placeholder {
+    color: hsla(0, 36%, 70%,0.8);
+}   
+
+.main form .email:focus {
+    border: hsl(0, 93%, 68%) 2px solid;
+}
+
+.main form button {
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 18px 1px #f4aaab86;
+    position: absolute;
+    right: 0;
+    border-radius: 5rem;
+    transition: .3s ease box-shadow;
+}
+
+.main form button:hover {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsla(0, 52%, 80%, 0.781));
+	box-shadow: 0px 0px 13px 2px #f4aaabbf;
+}
+
+.main form .error {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: 25%;
+}
+
+.main form .hide {
+    visibility: hidden;
+}
+
+.main form .error-description {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    color: hsla(0, 93%, 68%,0.8);
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 4rem;
+        left: 10%;
+    }
+    
+    .logo-img {
+        width: auto;
+    }
+    
+    .main {
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .main .right {
+        background: url('images/hero-desktop.jpg');
+        height: 100vh;
+        width: 70%;
+        background-size: cover;
+    }
+    
+    .main .left {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 15rem 5% 0 10%;
+        background: url('images/bg-pattern-desktop.svg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        /* background: blue; */
+        justify-content: left;
+        text-align: left;
+    }
+
+    .main .left h1 {
+        font-size: 5rem;
+        letter-spacing: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .main .left .description{
+        max-width: 450px;
+        line-height: 1.5rem;
+    }
+
+    .main .left form {
+        max-width: 450px;
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
